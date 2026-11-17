@@ -1305,6 +1305,7 @@ fn struct_sizes_and_offsets_match_c() {
     check(&t, "offset", "cui_popover_opts.width", offset_of!(cui_popover_opts, width) as i64);
     check(&t, "offset", "cui_popover_opts.pad", offset_of!(cui_popover_opts, pad) as i64);
     check(&t, "offset", "cui_popover_opts.gap", offset_of!(cui_popover_opts, gap) as i64);
+    check(&t, "offset", "cui_popover_opts.anchor_off", offset_of!(cui_popover_opts, anchor_off) as i64);
     check(&t, "size", "cui_presence_user", size_of::<cui_presence_user>() as i64);
     check(&t, "offset", "cui_presence_user.name", offset_of!(cui_presence_user, name) as i64);
     check(&t, "offset", "cui_presence_user.color", offset_of!(cui_presence_user, color) as i64);

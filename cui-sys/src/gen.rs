@@ -1663,6 +1663,7 @@ pub struct cui_popover_opts {
     pub width: f32,
     pub pad: f32,
     pub gap: f32,
+    pub anchor_off: f32,
 }
 
 // Presence: who is here now. Overlapping avatars with a colored ring each,
@@ -2728,33 +2729,33 @@ pub struct cui_wheel_opts {
 }
 
 // ---- enum constants ----
-// anon105410
+// anon105428
 pub const CUI_DIFF_IGNORE_EOL: i32 = 1;
-// anon107673
+// anon107691
 pub const CUI_COMMENT_LIKE: i32 = 1;
 pub const CUI_COMMENT_REPLY: i32 = 2;
-// anon130863
+// anon130881
 pub const CUI_PLAYER_TOGGLE: i32 = 1;
 pub const CUI_PLAYER_PREV: i32 = 2;
 pub const CUI_PLAYER_NEXT: i32 = 4;
 pub const CUI_PLAYER_SEEK: i32 = 8;
-// anon135256
+// anon135274
 pub const CUI_RESPONSE_COPY: i32 = 1;
 pub const CUI_RESPONSE_REGENERATE: i32 = 2;
 pub const CUI_RESPONSE_UP: i32 = 4;
 pub const CUI_RESPONSE_DOWN: i32 = 8;
 pub const CUI_RESPONSE_SHARE: i32 = 16;
-// anon137424
+// anon137442
 pub const CUI_COMPOSER_SEND: i32 = 1;
 pub const CUI_COMPOSER_STOP: i32 = 2;
 pub const CUI_COMPOSER_ATTACH: i32 = 4;
 pub const CUI_COMPOSER_REMOVE: i32 = 8;
 pub const CUI_COMPOSER_MODEL: i32 = 16;
-// anon234996
+// anon235014
 pub const CUI_REGEX_ICASE: i32 = 1;
 pub const CUI_REGEX_MULTILINE: i32 = 2;
 pub const CUI_REGEX_DOTALL: i32 = 4;
-// anon260964
+// anon260982
 pub const CUI_SHADE_TEXT: i32 = 0;
 pub const CUI_SHADE_RRECT: i32 = 1;
 pub const CUI_SHADE_SHADOW: i32 = 2;
@@ -2771,13 +2772,13 @@ pub const CUI_CHANGED: i32 = 1;
 pub const CUI_SUBMITTED: i32 = 2;
 pub const CUI_FOCUSED: i32 = 4;
 pub const CUI_BLURRED: i32 = 8;
-// anon48792
+// anon48810
 pub const CUI_TOUR_NONE: i32 = 0;
 pub const CUI_TOUR_NEXT: i32 = 1;
 pub const CUI_TOUR_BACK: i32 = 2;
 pub const CUI_TOUR_DONE: i32 = 3;
 pub const CUI_TOUR_SKIPPED: i32 = 4;
-// anon78992
+// anon79010
 pub const CUI_TREE_HAS_CHILDREN: i32 = 1;
 pub const CUI_TREE_OPEN: i32 = 2;
 pub const CUI_TREE_SELECTED: i32 = 4;

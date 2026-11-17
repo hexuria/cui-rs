@@ -427,6 +427,7 @@ typedef struct cui_popup {
     int z;                     /* stacking order: later opens are on top */
     uint64_t last_frame;
     float t;                   /* open animation 0..1 */
+    float anchor_off;          /* distance from the anchor, 0 = the default 6 */
     cui_spring s;
 } cui_popup;
 
@@ -47058,7 +47059,7 @@ bool cui__popup_begin(cui_ctx *ui, cui_id id, cui_id anchor, int placement, floa
         ui->nodes[root].fx = p->mouse.x;
         ui->nodes[root].fy = p->mouse.y;
     } else {
-        root = cui__float_begin(ui, id, z, anchor, placement, 6);
+        root = cui__float_begin(ui, id, z, anchor, placement, p->anchor_off > 0 ? p->anchor_off : 6);
     }
     cui_node *n = &ui->nodes[root];
     cui__panel_style(ui, n, pad);
@@ -47111,6 +47112,7 @@ bool cui_popover_begin(cui_ctx *ui, const char *id, const cui_popover_opts *o) {
     if (p->open && p->opened_frame == ui->frame) anchor = ui->last_id;
     if (!p->anchor || p->opened_frame + 1 >= ui->frame) p->anchor = ui->last_id;
     anchor = p->anchor;
+    p->anchor_off = o->anchor_off;
     return cui__popup_begin(ui, pid, anchor, o->placement, o->width, o->pad > 0 ? o->pad : 16, o->gap > 0 ? o->gap : 10, false);
 }
 

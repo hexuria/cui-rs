@@ -888,7 +888,7 @@ typedef enum cui_placement {
 
 /* Popover anchored to the previous component. Toggle it with
  * cui_popover_toggle / cui_popover_open. */
-typedef struct cui_popover_opts { int _; cui_placement placement; float width; float pad; float gap; } cui_popover_opts;
+typedef struct cui_popover_opts { int _; cui_placement placement; float width; float pad; float gap; float anchor_off; } cui_popover_opts;
 CUI_API bool cui_popover_begin(cui_ctx *ui, const char *id, const cui_popover_opts *opts);
 CUI_API void cui_popover_end(cui_ctx *ui);
 

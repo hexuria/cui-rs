@@ -1697,6 +1697,7 @@ void gen_probe_all(void) {
     OFF(cui_popover_opts, width);
     OFF(cui_popover_opts, pad);
     OFF(cui_popover_opts, gap);
+    OFF(cui_popover_opts, anchor_off);
     OFF(cui_presence_user, name);
     OFF(cui_presence_user, color);
     OFF(cui_presence_user, avatar);
